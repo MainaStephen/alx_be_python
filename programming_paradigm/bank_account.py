@@ -16,11 +16,12 @@ class BankAccount:
         return False
 
     def display_balance(self):
+        # Ensure exactly two decimal places
         print(f"Current Balance: ${self.__account_balance:.2f}")
 
 # Main logic for command-line interaction
 def main():
-    account = BankAccount(100)  # Example starting balance
+    account = BankAccount(100)  # Starting balance
 
     if len(sys.argv) < 2:
         print("Usage: python bank_account_tool.py <command>:<amount>")
